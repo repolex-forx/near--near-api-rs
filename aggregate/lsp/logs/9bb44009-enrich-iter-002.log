@@ -1,0 +1,26 @@
+[2026-05-08T02:33:47Z] === ENRICH ITERATION 2 START | repo=near/near-api-rs sha=9bb44009 ===
+[2026-05-08T02:33:47Z] [iter=2] PHASE START: enrich repo=near/near-api-rs sha=9bb44009 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/9bb44009-enrich-iter-002.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/9bb44009e187fc8ce5fd5b9366a026ea01a4b9c6.nq.gz
+[2026-05-08T02:34:21Z] [iter=2] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-05-08T02:34:23Z] [iter=2] AST store loaded triples=268966 load_secs=2 mem_mb=454 MB
+[2026-05-08T02:34:23Z] [iter=2] Step 2: Finding LSP targets mem_mb=454 MB
+[2026-05-08T02:34:24Z] [iter=2] LSP targets found call_sites=2340 imports=86 extends=0 implements=110 secs=1
+[2026-05-08T02:34:24Z] [iter=2] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=454 MB
+[2026-05-08T02:34:26Z] [iter=2] Position index built positions=18481 nodes_with_types=22500 secs=1 mem_mb=454 MB
+[2026-05-08T02:34:26Z] [iter=2] Step 3: Starting LSP resolution mem_mb=454 MB already_completed_types=[] already_completed_files=0
+[2026-05-08T02:34:26Z] [iter=2] Resolving target type target_type=call_site count=2340
+[2026-05-08T02:36:59Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=3.2 files_done=0 resolved=0 errors=0 current=tests/account.rs
+[2026-05-08T02:38:06Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=4.3 files_done=1 resolved=23 errors=150 current=examples/nep_413_signing_message.rs
+[2026-05-08T02:38:38Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=4.9 files_done=7 resolved=80 errors=457 current=src/contract.rs
+[2026-05-08T02:39:10Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=5.4 files_done=11 resolved=327 errors=745 current=examples/account_key_pooling.rs
+[2026-05-08T02:39:45Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=6.0 files_done=20 resolved=527 errors=1076 current=src/config.rs
+[2026-05-08T02:40:17Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=6.5 files_done=26 resolved=619 errors=1398 current=src/transactions.rs
+[2026-05-08T02:40:30Z] [iter=2] Target type resolved target_type=call_site resolved=729 errors=1517 secs=364 mem_mb=454 MB
+[2026-05-08T02:40:30Z] [iter=2] Resolving target type target_type=import_statement count=86
+[2026-05-08T02:40:51Z] [iter=2] HEARTBEAT target_type=import_statement elapsed_min=7.1 files_done=0 resolved=0 errors=0 current=examples/nft.rs
+[2026-05-08T02:41:18Z] [iter=2] Target type resolved target_type=import_statement resolved=82 errors=0 secs=49 mem_mb=454 MB
+[2026-05-08T02:41:18Z] [iter=2] Resolving target type target_type=implements_clause count=110
+[2026-05-08T02:41:40Z] [iter=2] HEARTBEAT target_type=implements_clause elapsed_min=7.9 files_done=0 resolved=0 errors=0 current=src/fastnear.rs
+[2026-05-08T02:42:08Z] [iter=2] Target type resolved target_type=implements_clause resolved=99 errors=0 secs=49 mem_mb=454 MB
+[2026-05-08T02:42:57Z] [iter=2] Step 5: Writing final enrichment file triples=18684
+[2026-05-08T02:42:57Z] [iter=2] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/9bb44009e187fc8ce5fd5b9366a026ea01a4b9c6.nq.gz size_kb=363
+[2026-05-08T02:42:57Z] [iter=2] PHASE END: enrich elapsed_s=551 elapsed_min=9.2 total_triples=18684
